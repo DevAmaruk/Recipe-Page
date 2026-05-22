@@ -1,0 +1,254 @@
+@font-face {
+  font-family: "Young-Serif-Regular";
+  src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit-SemiBold";
+  src: url("assets/fonts/outfit/static/Outfit-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit-Regular";
+  src: url("assets/fonts/outfit/static/Outfit-Regular.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit-Bold";
+  src: url("assets/fonts/outfit/static/Outfit-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --bg-page: #f3e5d7;
+  --bg-card: #ffffff;
+  --heading: #312e2c;
+  --text-primary: #854632;
+  --text-secondary: #5f564d;
+  --bg-second-card: #fff7fb;
+  --divider: #e3ddd7;
+  --subheading: #7a284e;
+  --accent: #5e2af8;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @media (width >= 640px) {
+    background-color: var(--bg-page);
+  }
+}
+
+main {
+  @media (width >= 640px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 8rem 3rem;
+    min-height: 100vh;
+  }
+}
+
+/*
+Card Container
+*/
+.card_container {
+  @media (width >= 640px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.5rem;
+    max-width: 616px;
+    background-color: var(--bg-card);
+    border-radius: 1.5rem;
+  }
+
+  @media (width >= 1200px) {
+    max-width: 736px;
+  }
+}
+
+/*
+Image
+*/
+.recipe_image {
+  width: 100%;
+
+  @media (width >= 640px) {
+    width: 536px;
+    border-radius: 0.75rem;
+  }
+}
+
+/*
+Main Container
+*/
+.recipe_main_container {
+  margin: 2rem 2rem 2.5rem 2rem;
+}
+
+/*
+Header
+*/
+.recipe_title {
+  font-family: "Young-Serif-Regular", serif;
+  font-size: 2rem;
+  color: var(--heading);
+}
+
+.recipe_description {
+  font-family: "Outfit-Regular", sans-serif;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+/*
+Preparation
+*/
+.preparation {
+  background-color: var(--bg-second-card);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.recipe_duration {
+  font-family: "Outfit-SemiBold", sans-serif;
+  font-size: 1.25rem;
+  color: var(--subheading);
+  margin: 0;
+}
+
+.recipe_duration_list {
+  font-family: "Outfit-Regular", sans-serif;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 2rem;
+}
+
+.recipe_duration_list li::marker {
+  color: var(--subheading);
+}
+
+/*
+Ingredients
+*/
+.ingredients h2 {
+  font-family: "Young-Serif-Regular", serif;
+  font-size: 1.75rem;
+  color: var(--text-primary);
+}
+
+.ingredients ul {
+  line-height: 2rem;
+  padding-left: 1.5rem;
+}
+
+.ingredients li {
+  color: var(--text-secondary);
+  font-family: "Outfit-Regular", sans-serif;
+  font-size: 1rem;
+}
+
+hr {
+  border: 1px solid var(--divider);
+}
+
+/*
+Instructions
+*/
+.recipe_heading {
+  font-family: "Young-Serif-Regular", serif;
+  font-size: 1.75rem;
+  color: var(--text-primary);
+}
+
+.instructions_lists li::marker {
+  font-family: "Outfit-Bold", sans-serif;
+  color: var(--text-primary);
+}
+
+.instructions_lists {
+  font-family: "Outfit-Regular", sans-serif;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  padding-left: 1.5rem;
+  list-style-position: outside;
+  line-height: 2rem;
+}
+
+.instructions_lists li {
+  padding-left: 1rem;
+}
+
+.instructions_bold {
+  font-family: "Outfit-Bold", sans-serif;
+}
+
+/*
+Nutrition
+*/
+.nutrition p {
+  font-family: "Outfit-Regular", sans-serif;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.recipe_table td {
+  font-family: "Outfit-Regular", sans-serif;
+  font-size: 1rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--divider);
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+td:nth-child(even) {
+  font-family: "Outfit-Bold", sans-serif;
+}
+
+table {
+  width: 100%;
+}
+
+.attribution {
+  font-family: "Outfit-Regular", sans-serif;
+  font-size: 1rem;
+  color: var(--heading);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.challenge {
+  font-family: "Outfit-Regular", sans-serif;
+  font-size: 1rem;
+  color: var(--heading);
+  margin-top: 0.5rem;
+}
+
+.challenge:link {
+  color: var(--accent);
+}
+
+.challenge:visited {
+  color: var(--accent);
+}
